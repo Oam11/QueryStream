@@ -1,6 +1,5 @@
-streamlit==1.21.0
-
-pandas==2.0.3
+streamlit
+pandas
 langchain==0.0.1  # Adjust the version as needed
 langchain-experimental==0.0.1  # Adjust the version as needed
 langchain-groq==0.0.1  # Adjust the version as needed
