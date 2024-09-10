@@ -98,7 +98,20 @@ if choice == "Ask Questions":
                         # Create the prompt for Groq Mixtral, including the schema
                         prompt_template = PromptTemplate(
                             input_variables=["schema", "question"],
-                            template="You are given the following database schema:\n{schema}\n\nBased on this schema, understand the question then generate an SQL query to answer the following question\n : {question}"
+                            template='''You are given the following database schema:
+
+                                Given the schema:
+
+                                {schema}
+
+                                Write an SQL query to answer this question:
+
+                                {question}
+
+                                **Guidelines:**
+                                1. Analyze the schema to understand table structures.
+                                2. Interpret the question and generate the SQL query accordingly.
+                                3. Provide only the SQL query.'''
                         )
                         
                         prompt = prompt_template.format(schema=schema_str, question=question)
