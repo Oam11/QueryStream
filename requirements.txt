@@ -1,5 +1,5 @@
 streamlit
 pandas
-langchain==0.0.1  # Adjust the version as needed
-langchain-experimental==0.0.1  # Adjust the version as needed
-langchain-groq==0.0.1  # Adjust the version as needed
+langchain
+langchain-experimental
+langchain-groq
