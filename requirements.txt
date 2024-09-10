@@ -1,5 +1,5 @@
 streamlit==1.21.0
-sqlite3  # This is included in the Python standard library, so you don't need to list it explicitly
+
 pandas==2.0.3
 langchain==0.0.1  # Adjust the version as needed
 langchain-experimental==0.0.1  # Adjust the version as needed
