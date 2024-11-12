@@ -129,7 +129,6 @@ if choice == "Ask Questions":
                         else:
                             st.error("Unexpected response format from the model.")
                             st.write("Response Type: ", type(response))
-                            # Do not use return here; instead, proceed with handling
                             response_content = ""
 
                         if response_content:
@@ -165,5 +164,15 @@ if choice == "Ask Questions":
                         st.error(f"Error generating SQL query: {str(e)}")
                     finally:
                         conn.close()  # Ensure the connection is closed after use
+        
+        # Add the download button for modified database
+        if st.button("Download Modified Database"):
+            with open(db_path, "rb") as file:
+                st.download_button(
+                    label="Download Database",
+                    data=file,
+                    file_name="modified_database.db",
+                    mime="application/octet-stream"
+                )
     else:
         st.warning("Please upload a database first.")
