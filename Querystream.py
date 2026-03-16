@@ -33,7 +33,7 @@ def initialize_groq_mixtral():
     try:
         api_key = st.secrets["groq"]["api_key"]
         llm = ChatGroq(
-            model="meta-llama/llama-4-maverick-17b-128e-instruct",
+            model="llama-3.3-70b-versatile",
             temperature=0.8,
             max_tokens=None,
             timeout=None,
